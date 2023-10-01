@@ -9,7 +9,7 @@ let n1, n2;
 n1 = parseInt(prompt("Introduce el primer número:"))
 n2 = parseInt(prompt("Introduce el segundo número:"))
 
-console.log("Los números introducidos son:")
+console.log("Entre esos dos números están:")
 
 if (n1 < n2) {
 

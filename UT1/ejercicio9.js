@@ -7,12 +7,11 @@
  */
 
 let n1, n2, numeros, arrayNumeros, caracter, sumar = "+", restar = "-", multiplicar = "*", dividir = "/";
-const exp = /[\+\-\*\/]/i
+const exp = /[\+\-*\/]/i
 numeros = prompt("Introduce dos números:", "X Y")
 arrayNumeros = numeros.split(" ")
 n1 = parseInt(arrayNumeros[0])
 n2 = parseInt(arrayNumeros[1])
-
 
 do {
 

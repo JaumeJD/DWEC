@@ -5,31 +5,28 @@
  */
 
 let hora, minuto, segundo;
-let horaF, minutoF, segundoF;
 
 hora = 23
 minuto = 59
-segundo = 58
+segundo = 59
 
 console.log(`Hora inicial: ${hora}:${minuto}:${segundo}`)
 
-horaF = hora
-minutoF = minuto
-segundoF = segundo + 1
+segundo += 1
 
-if (segundoF == 60) {
+if (segundo == 60) {
 
-    segundoF = 0
-    minutoF += 1
+    segundo = 0
+    minuto += 1
 
-    if (minutoF == 60) {
-        minutoF = 0
-        horaF += 1
+    if (minuto == 60) {
+        minuto = 0
+        hora += 1
 
-        if (horaF == 24) {
-            horaF = 0
+        if (hora == 24) {
+            hora = 0
         }
     }
 }
 
-console.log(`Un segundo después: ${horaF}:${minutoF}:${segundoF}`)
+console.log(`Un segundo después: ${hora}:${minuto}:${segundo}`)
