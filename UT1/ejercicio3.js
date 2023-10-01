@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 /**
  * Dada una hora en horas, minutos y segundos, indicar qué hora será pasado un segundo.
@@ -29,4 +29,4 @@ if (segundo == 60) {
     }
 }
 
-console.log(`Un segundo después: ${hora}:${minuto}:${segundo}`)
+console.log(`Un segundo después: ${(hora < 10 ? "0" + hora : hora)}:${(minuto < 10 ? "0" + minuto : minuto)}:${(segundo < 10 ? "0" + segundo : segundo)}`)
