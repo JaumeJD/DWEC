@@ -5,16 +5,16 @@
  * por sí mismo y 1) o no, pe. miFuncion(7) devolverá true
  */
 
-let n1;
-n1 = Math.floor(Math.random() * (100 - 3 + 1) + 3)
+let num1;
+num1 = Math.floor(Math.random() * (100 - 3 + 1) + 3)
 
-let comprobarPrimo = (n1) => {
-    for (let i = 2; i < n1; i++) {
-        if (n1 % i == 0) {
+let comprobarPrimo = (num1) => {
+    for (let index = 2; index < num1; index++) {
+        if (num1 % index == 0) {
             return false
         }
     }
     return true
 }
 
-console.log(`${n1} => ${comprobarPrimo(n1)}`)
+console.log(`${num1} => ${comprobarPrimo(num1)}`)
