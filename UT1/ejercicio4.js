@@ -9,14 +9,18 @@ let respuesta, suma = 0, producto = 1, media = 0, cont = 0;
 
 do {
 
-    cont += 1
     respuesta = parseInt(prompt("Introduce un número:"))
-    suma += respuesta
-    producto *= respuesta
-    media = suma / cont
+
+    if (respuesta >= 0) {
+        cont += 1
+        suma += respuesta
+        producto *= respuesta
+        media = suma / cont
+    }
 
 } while (respuesta >= 0);
 
 console.log(`El sumatorio de los números introducidos es: ${suma}.\n` +
     `El producto de los números introducidos es: ${producto}.\n` +
     `La media de los número introducidos es ${media}`)
+

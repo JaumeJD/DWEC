@@ -4,11 +4,13 @@
  * Dada una hora en horas, minutos y segundos, indicar qué hora será pasado un segundo.
  */
 
-let hora, minuto, segundo;
+let hora, minuto, segundo, inicio, arrayInicio;
 
-hora = 23
-minuto = 59
-segundo = 59
+inicio = prompt("Introduce la hora inicial:", "HH:MM:SS")
+arrayInicio = inicio.split(":")
+hora = parseInt(arrayInicio[0])
+minuto = parseInt(arrayInicio[1])
+segundo = parseInt(arrayInicio[2])
 
 console.log(`Hora inicial: ${hora}:${minuto}:${segundo}`)
 

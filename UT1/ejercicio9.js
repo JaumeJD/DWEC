@@ -6,12 +6,17 @@
  * Si no lo son, solicitarlos de nuevo, si lo son, mostrar el resultado.
  */
 
-let n1, n2, numeros, arrayNumeros, caracter, sumar = "+", restar = "-", multiplicar = "*", dividir = "/";
-const exp = /[\+\-*\/]/i
-numeros = prompt("Introduce dos números:", "X Y")
-arrayNumeros = numeros.split(" ")
-n1 = parseInt(arrayNumeros[0])
-n2 = parseInt(arrayNumeros[1])
+let num1, num2, numeros, arrayNumeros, caracter, sumar = "+", restar = "-", multiplicar = "*", dividir = "/"
+const exp = /[\+\-*\/]/
+
+do {
+
+    numeros = prompt("Introduce dos números:", "X Y")
+    arrayNumeros = numeros.split(" ")
+    num1 = parseInt(arrayNumeros[0])
+    num2 = parseInt(arrayNumeros[1])
+
+} while (isNaN(n1) || isNaN(n2));
 
 do {
 
@@ -20,19 +25,19 @@ do {
     switch (caracter) {
 
         case "+":
-            console.log(`${n1} más ${n2} es igual a ${n1 + n2}`)
+            console.log(`${num1} más ${num2} es igual a ${num1 + num2}`)
             break;
 
         case "-":
-            console.log(`${n1} menos ${n2} es igual a ${n1 - n2}`)
+            console.log(`${num1} menos ${num2} es igual a ${num1 - num2}`)
             break;
 
         case "*":
-            console.log(`${n1} por ${n2} es igual a ${n1 * n2}`)
+            console.log(`${num1} por ${num2} es igual a ${num1 * num2}`)
             break;
 
         case "/":
-            console.log(`${n1} entre ${n2} es igual a ${n1 / n2}`)
+            console.log(`${num1} entre ${num2} es igual a ${num1 / num2}`)
             break;
 
         default:

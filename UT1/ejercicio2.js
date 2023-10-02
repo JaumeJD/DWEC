@@ -5,20 +5,20 @@
  * ceros, que los vuelva a pedir.
  */
 
-let respuesta, numeros, n1, n2;
+let respuesta, numeros, num1, num2;
 
-let compararNumeros = (n1, n2) => {
+let compararNumeros = (num1, num2) => {
 
-    if (n1 < n2) {
-        return `${n1} es MENOR que ${n2}`
+    if (num1 < num2) {
+        return `${num1} es MENOR que ${num2}`
     }
 
-    if (n1 > n2) {
-        return `${n1} es MAYOR que ${n2}`
+    if (num1 > num2) {
+        return `${num1} es MAYOR que ${num2}`
     }
 
-    if (n1 === n2) {
-        return `${n1} es IGUAL que ${n2}`
+    if (num1 === num2) {
+        return `${num1} es IGUAL que ${num2}`
     }
 }
 
@@ -26,9 +26,9 @@ do {
 
     respuesta = prompt("Introduce dos número mayores que 0:", "X Y")
     numeros = respuesta.split(" ")
-    n1 = numeros[0]
-    n2 = numeros[1]
+    num1 = numeros[0]
+    num2 = numeros[1]
 
 } while (n1 <= 0 || n2 <= 0 || isNaN(n1) || isNaN(n2));
 
-console.log(compararNumeros(n1, n2))
+console.log(compararNumeros(num1, num2))
