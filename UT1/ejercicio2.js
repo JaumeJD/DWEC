@@ -29,6 +29,6 @@ do {
     num1 = numeros[0]
     num2 = numeros[1]
 
-} while (n1 <= 0 || n2 <= 0 || isNaN(n1) || isNaN(n2));
+} while (num1 <= 0 || num2 <= 0 || isNaN(num1) || isNaN(num2));
 
 console.log(compararNumeros(num1, num2))
