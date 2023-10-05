@@ -9,14 +9,17 @@ AAAA
 AAA
 AA
 A
- */
+*/
 
 let num = 5
-let caracter = "X"
-let patron = caracter.repeat(num)
+let caracter = "O"
 
-let dibujarPatron = (patron) => {
-
+let dibujarPatron = (caracter, num) => {
+    let patron = caracter.repeat(num)
+    for (let i = 0; i < 5; i++) {
+        console.log(patron)
+        patron = patron.substring(1)
+    }
 }
 
-dibujarPatron(patron)
+dibujarPatron(caracter, num)
