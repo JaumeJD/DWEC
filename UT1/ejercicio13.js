@@ -9,7 +9,7 @@
 
 let producto = 1, num = Math.floor(Math.random() * 10)
 
-const calculaFactorial = (num) => {
+const calcularFactorial = (num) => {
     for (let i = 1; i <= num; i++) {
         producto *= i
     }

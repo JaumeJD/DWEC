@@ -13,7 +13,7 @@ let dniNoValido = "12345678H"
 //Expresión regular para validar dni.
 const exp = /^[1-9]{8}[A-Z]$/ig
 
-const validaDni = (dni, exp) => {
+const validarDni = (dni, exp) => {
 
     if (exp.test(dni)) {
 

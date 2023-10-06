@@ -9,7 +9,7 @@
 let cantidad = Math.floor(Math.random() * 1000)
 let descuento = Math.floor(Math.random() * 100)
 
-const aplicaDescuento = (cantidad, descuento) => {
+const aplicarDescuento = (cantidad, descuento) => {
     return cantidad - (cantidad * (descuento / 100))
 }
 
