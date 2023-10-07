@@ -7,7 +7,9 @@
  * pe. miFuncion(5) devolverá 120
  */
 
-let producto = 1, num = Math.floor(Math.random() * 10)
+let producto = 1, productoR = 1
+let num = Math.floor(Math.random() * (10 - 1) + 1)
+let numR = Math.floor(Math.random() * (10 - 1) + 1)
 
 const calcularFactorial = (num) => {
     for (let i = 1; i <= num; i++) {
@@ -16,4 +18,13 @@ const calcularFactorial = (num) => {
     return producto
 }
 
-console.log(`El factorial de ${num} es ${calculaFactorial(num)}.`)
+const calcularFactorialRecursiva = (numR) => {
+    if (numR == 0) {
+        return productoR
+    }
+    productoR *= numR
+    return calcularFactorialRecursiva(numR - 1)
+}
+
+console.log(`El factorial de ${num} es ${calcularFactorial(num)}.`)
+console.log(`El factorial con recursiva de ${numR} es ${calcularFactorialRecursiva(numR)}`)

@@ -21,7 +21,7 @@ const validarDni = (dni, exp) => {
         let letra = dni.substring(8)
         let modulo = numerosDni % 23
 
-        //Tabla de 
+        //Relacion resto del modulo y letra correspondiente.
         if (modulo == 0 && letra == "T" || modulo == 1 && letra == "R" || modulo == 2 && letra == "W" ||
             modulo == 3 && letra == "A" || modulo == 4 && letra == "G" || modulo == 5 && letra == "M" ||
             modulo == 6 && letra == "Y" || modulo == 7 && letra == "F" || modulo == 8 && letra == "P" ||
