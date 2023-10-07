@@ -37,6 +37,3 @@ const validarDni = (dni, exp) => {
 }
 
 console.log(`El dni ${dni} ${(validaDni(dni, exp)) ? "es válido." : "no es válido."}`)
-
-
-

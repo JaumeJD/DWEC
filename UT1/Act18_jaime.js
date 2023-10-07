@@ -5,10 +5,10 @@
  * de caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola".
 */
 
-let num, texto = "Hola Mundo"
+let num = 4, texto = "Hola Mundo"
 
 const recortarTexto = (texto, num) => {
-
+    return texto.substring(0, num)
 }
 
-recortarTexto(texto, num)
+console.log(recortarTexto(texto, num))
