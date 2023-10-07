@@ -10,7 +10,7 @@ let dni = "54179163H"
 let dniValido = "12345678Z"
 let dniNoValido = "12345678H"
 
-//Expresión regular para validar dni.
+//Expresión regular para comprobar dni.
 const exp = /^[1-9]{8}[A-Z]$/ig
 
 const validarDni = (dni, exp) => {
@@ -21,6 +21,7 @@ const validarDni = (dni, exp) => {
         let letra = dni.substring(8)
         let modulo = numerosDni % 23
 
+        //Tabla de 
         if (modulo == 0 && letra == "T" || modulo == 1 && letra == "R" || modulo == 2 && letra == "W" ||
             modulo == 3 && letra == "A" || modulo == 4 && letra == "G" || modulo == 5 && letra == "M" ||
             modulo == 6 && letra == "Y" || modulo == 7 && letra == "F" || modulo == 8 && letra == "P" ||
