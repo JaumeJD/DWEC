@@ -11,14 +11,14 @@ let dniValido = "12345678Z"
 let dniNoValido = "12345678H"
 
 //Expresión regular para comprobar dni.
-const exp = /^[1-9]{8}[A-Z]$/ig
+const exp = /^[0-9]{8}[A-Z]$/i
 
 const validarDni = (dni, exp) => {
 
     if (exp.test(dni)) {
 
-        let numerosDni = dni.substring(0, 8)
         let letra = dni.substring(8)
+        let numerosDni = dni.substring(0, 8)
         let modulo = numerosDni % 23
 
         //Relacion resto del modulo y letra correspondiente.
@@ -32,9 +32,13 @@ const validarDni = (dni, exp) => {
             modulo == 21 && letra == "K" || modulo == 22 && letra == "E") {
             return true
         }
+        console.log(1)
         return false
     }
+    console.log(2)
     return false
 }
 
-console.log(`El dni ${dni} ${(validaDni(dni, exp)) ? "es válido." : "no es válido."}`)
+console.log(`El dni ${dni} ${(validarDni(dni, exp)) ? "es válido." : "no es válido."}`);
+console.log(`El dni ${dniValido} ${(validarDni(dniValido, exp)) ? "es válido." : "no es válido."}`);
+console.log(`El dni ${dniNoValido} ${(validarDni(dniNoValido, exp)) ? "es válido." : "no es válido."}`);

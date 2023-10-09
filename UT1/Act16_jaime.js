@@ -16,7 +16,7 @@ let caracter = "O"
 
 let dibujarPatron = (caracter, num) => {
     let patron = caracter.repeat(num)
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < num; i++) {
         console.log(patron)
         patron = patron.substring(1)
     }

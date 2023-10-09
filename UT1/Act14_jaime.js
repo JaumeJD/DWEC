@@ -6,8 +6,8 @@
  * pe. miFuncion(1000, 20) devolverá 800
  */
 
-let cantidad = Math.floor(Math.random() * 1000)
-let descuento = Math.floor(Math.random() * 100)
+let cantidad = Math.floor(Math.random() * (1000 - 1) + 1)
+let descuento = Math.floor(Math.random() * (100 - 1) + 1)
 
 const aplicarDescuento = (cantidad, descuento) => {
     return cantidad - (cantidad * (descuento / 100))

@@ -8,11 +8,8 @@
 let cadena = "1a3s5d7f9h0"
 
 const contarCadena = (cadena) => {
-    let cont = 0;
-    for (let i = 0; i < cadena.length; i++) {
-        cont++
-    }
-    return cont
+
+    return cadena.length
 }
 
 console.log(`${cadena} tiene ${contarCadena(cadena)} caracteres.`)

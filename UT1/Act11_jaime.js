@@ -5,7 +5,7 @@
  * pe. miFuncion(29) devolverá Impar.
  */
 
-let num = Math.floor(Math.random() * 100)
+let num = Math.floor(Math.random() * 10)
 
 const parImpar = (num) => (num % 2 == 0) ? "par" : "impar"
 
