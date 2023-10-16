@@ -1,8 +1,6 @@
 "use strict"
 
-/**
- * Mostrar todos los números que hay entre dos números introducidos por el usuario, no incluidos.
- */
+//Mostrar todos los números que hay entre dos números introducidos por el usuario, no incluidos.
 
 let num1, num2;
 

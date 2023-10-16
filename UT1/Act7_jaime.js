@@ -1,8 +1,6 @@
 "use strict"
 
-/**
- * Mostrar todos los números divisores de un número introducido por el usuario.
- */
+//Mostrar todos los números divisores de un número introducido por el usuario.
 
 let num1;
 

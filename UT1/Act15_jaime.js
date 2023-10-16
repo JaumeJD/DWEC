@@ -1,9 +1,6 @@
 "use strict"
 
-/**
- * Indica si un NIF es válido o no.
- */
-
+//Indica si un NIF es válido o no.
 let dni = "54179163H"
 
 //Para saber la letra válida, obtener el resto de la parte numérica entre 23, este caso Z.

@@ -5,7 +5,7 @@
  * un Array de textos separados por cierto carácter, 
  * pe. miFuncion('hola que tal', ' ') 
  * devolverá ['hola', 'que', 'tal']
- */
+*/
 
 let cadena = "Hola que tal"
 

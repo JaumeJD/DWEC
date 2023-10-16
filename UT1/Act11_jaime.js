@@ -3,7 +3,7 @@
 /**
  * Programa una función que determine si un número es par o impar, 
  * pe. miFuncion(29) devolverá Impar.
- */
+*/
 
 let num = Math.floor(Math.random() * 10)
 

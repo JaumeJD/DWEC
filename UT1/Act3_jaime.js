@@ -1,8 +1,6 @@
 "use strict";
 
-/**
- * Dada una hora en horas, minutos y segundos, indicar qué hora será pasado un segundo.
- */
+//Dada una hora en horas, minutos y segundos, indicar qué hora será pasado un segundo.
 
 let hora, minuto, segundo, inicio, arrayInicio;
 

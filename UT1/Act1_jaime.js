@@ -1,8 +1,6 @@
 "use strict"
 
-/**
- * Dados dos números indicar cuál es mayor, menor o si son iguales.
- */
+//Dados dos números indicar cuál es mayor, menor o si son iguales.
 
 let num1 = Math.floor(Math.random() * 100)
 let num2 = Math.floor(Math.random() * 100)
