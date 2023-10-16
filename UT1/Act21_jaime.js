@@ -10,7 +10,7 @@ const invertirCadena = cadena => {
     let cadenaInvertida = ""
 
     for (let index = cadena.length - 1; index >= 0; index--) {
-        cadenaInvertida.concat(cadena[index])
+        cadenaInvertida += cadena[index]
     }
     return cadenaInvertida
 }
