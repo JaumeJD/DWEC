@@ -7,10 +7,11 @@
 */
 
 let cadena = "xyz1, xyz2, xyz3, xyz4, xyz5"
-let patron = new RegExp()
+let patron = /xyz/ig
 
-const eliminarPatron = (cadena, patron) => {
-    
+function eliminarPatron(cadena, patron) {
+
+    return cadena.replace(patron, "")
 }
 
-console.log(eliminarPatron())
+console.log(eliminarPatron(cadena, patron))
