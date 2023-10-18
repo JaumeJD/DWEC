@@ -13,8 +13,8 @@ const vector = [0, -1, -2, 3, 4, -5, 6, -7, 8, 9]
     //B) Cuántos son pares y cuántos impares y cuáles son.
     let numPares = vector.filter(num => num % 2 == 0)
     let numImpares = vector.filter(num => num % 2 != 0)
-    console.log(`Los números pares son ${numPares}`)
-    console.log(`Los números impares son ${numImpares}`)
+    console.log(`Los números pares son ${numPares} || ${numPares.length} números pares.`)
+    console.log(`Los números impares son ${numImpares} || ${numImpares.length} números impares.`)
 }
 
 {
@@ -64,7 +64,7 @@ const vector = [0, -1, -2, 3, 4, -5, 6, -7, 8, 9]
     let numMayor = vector.sort((a, b) => a - b).slice(-1)
     console.log(`El número mayor es ${numMayor}`)
 }
-//USAR shift() O pop() ELIMINA EL ELEMENTO DEL ARRAY
+//USAR shift() O pop() ELIMINA EL ELEMENTO DEL ARRAY <= ¿Declarado como const?
 {
     //H) El número menor.
     let numMenor = vector.sort((a, b) => a - b).slice(0, 1)
@@ -92,6 +92,5 @@ const vector = [0, -1, -2, 3, 4, -5, 6, -7, 8, 9]
 {
     //K) Buscar un valor introducido por el usuario e indicar si existe o no
     let busqueda = prompt("Introduce un valor: ")
-    console.log(`${vector.some(item => item == busqueda) ? 'El valor introducido existe.' : 'El valor introducido no existe.'}`)
-
+    console.log(`${vector.some(item => item == busqueda) ? `${busqueda} existe en mi array.` : `${busqueda} no existe en mi array.`}`)
 }
