@@ -15,4 +15,4 @@ const eliminarPatron = (cadena, patron) => {
     }
 }
 
-console.log(eliminarPatron())
+console.log(eliminarPatron(cadena, patron))

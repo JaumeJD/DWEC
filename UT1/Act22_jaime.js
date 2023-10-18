@@ -13,7 +13,6 @@ const contarPalabra = (cadena, palabra) => {
 
     let contador = 0
     let arrayCadena = cadena.split(" ")
-    console.log(arrayCadena)
 
     /*RECORRE CON FOREACH
 
