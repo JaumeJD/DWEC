@@ -7,10 +7,12 @@
 */
 
 let cadena = "xyz1, xyz2, xyz3, xyz4, xyz5"
-let patron = new RegExp()
+let patron = /xyz/ig
 
 const eliminarPatron = (cadena, patron) => {
-    
+    if (patron.test(cadena)) {
+        console.log(`Funciona`)
+    }
 }
 
 console.log(eliminarPatron())
