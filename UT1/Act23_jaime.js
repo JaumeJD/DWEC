@@ -6,16 +6,13 @@
  * pe. mifuncion("Salas") devolverá true.
 */
 
-let palabra = "Salas"
+let palabra = "ojo rojo"
 
 const esPalindromo = (palabra) => {
-    palabra = palabra.toLocaleLowerCase()
-    let palabra2 = ""
+    palabra = palabra.toLocaleLowerCase().replace(/\s+/g, "")
 
-    for (let index = palabra.length - 1; index >= 0; index--) {
-        palabra2 += palabra[index]
-    }
-    
+    let palabra2 = palabra.split("").reverse().join("")
+
     if (palabra === palabra2) {
         return true
     }

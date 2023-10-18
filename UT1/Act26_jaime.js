@@ -6,16 +6,16 @@
  * con funciones de cadena y con expresiones regulares.
 */
 
-let cadena = "malo"
-let patron = /^[md].*[ao]$/ig
+let patron = /^[md].*[ao]$/i
 
 const comprobarCadena = (cadena, patron) => {
-
-    if (patron.test(cadena)) {
-        return true
-    }
-
-    return false
+    return patron.test(cadena) ? `${cadena} CUMPLE con el patrón.` : `${cadena} NO CUMPLE con el patrón.`
 }
 
-console.log(comprobarCadena(cadena))
+console.log(comprobarCadena("malo", patron))
+console.log(comprobarCadena("mala", patron))
+console.log(comprobarCadena("dado", patron))
+console.log(comprobarCadena("dada", patron))
+console.log(comprobarCadena("tarro", patron))
+console.log(comprobarCadena("diamante", patron))
+console.log(comprobarCadena("tigre", patron))

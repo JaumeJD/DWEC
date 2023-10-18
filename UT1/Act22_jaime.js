@@ -1,3 +1,4 @@
+
 "use strict"
 
 /**
@@ -6,31 +7,19 @@
  * pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 */
 
-let cadena = "hola mundo adios mundo adios"
-let palabra = "adios"
+let texto = "hola mundo adios mundo adios"
+let palabra = "mundo"
 
-const contarPalabra = (cadena, palabra) => {
+const contarPalabra = (texto, palabra) => {
 
     let contador = 0
-    let arrayCadena = cadena.split(" ")
+    let regExp = new RegExp(palabra, "ig")
 
-    /*RECORRE CON FOREACH
+    let repeticiones = texto.match(regExp)
 
-        arrayCadena.forEach(element => {
-            if (palabra === element) {
-                contador++
-            }
-        });
-    */
-
-    //RECORRE CON MAP
-    arrayCadena.map(item => {
-        if (palabra === item) {
-            contador++
-        }
-    })
+    contador = repeticiones.length
 
     return contador
 }
 
-console.log(`Se repite ${contarPalabra(cadena, palabra)} ${contarPalabra(cadena, palabra) > 1 ? 'veces.' : 'vez.'}`)
+console.log(`Se repite ${contarPalabra(texto, palabra)} ${contarPalabra(texto, palabra) > 1 ? 'veces.' : 'vez.'}`)
