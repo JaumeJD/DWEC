@@ -8,14 +8,10 @@
 let num = 2002
 
 const esCapicua = (num) => {
-    let aux = num.toString()
-    let aux2 = ""
 
-    for (let i = aux.length - 1; i >= 0; i--) {
-        aux2 += aux[i]
-    }
+    let aux = num.toString().split("").reverse().join("")
 
-    if (aux == aux2) {
+    if (aux == num) {
         return true
     }
     return false
