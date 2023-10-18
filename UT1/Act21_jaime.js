@@ -15,13 +15,12 @@ const invertirCadena = cadena => {
     return cadenaInvertida
 }
 
-console.log(invertirCadena("Hola Mundo"))
-
-//Solución de internet
 const invertirCadena2 = cadena => {
-
-    return (cadena === '') ? '' : invertirCadena2(cadena.substr(1)) + cadena.charAt(0);
-
+    let array = cadena.split("")
+    array.reverse()
+    let cadenaInvertida = array.join("")
+    return cadenaInvertida
 }
 
-console.log(invertirCadena2("Hola Mundo 2"))
+console.log(invertirCadena("Hola Mundo"))
+console.log(invertirCadena2("Hola Mundo"))
