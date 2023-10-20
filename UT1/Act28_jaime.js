@@ -1,14 +1,9 @@
 "use strict"
 
-/**
-En un vector de cadenas, indicar:
-a. La cadena más corta.
-b. La cadena más larga.
-c. La cadena con más letras ‘a’.
-d. Cuántas cadenas hay que tengan la ‘b’ y cuáles son.
-*/
+//En un vector de cadenas, indicar:
 
-const vectorCadenas = ["diamante", "esternocleidomastoideo", "bola", "ola", "pasamontañas", "salto", "bollicao"]
+const vectorCadenas = ["diamante", "esternocleidomastoideo", "bola",
+    "ola", "pasamontañas", "salto", "bollicao"]
 
 //A) La cadena más corta.
 {
