@@ -5,12 +5,20 @@
  * sabiendo la fecha de nacimiento.
 */
 
-let fechaNacimiento = "1997-05-15"
+let fechaNacimiento = "1997-10-21"
 let calcularEdad = fechaNacimiento => {
     let fechaActual = new Date()
     let fechaNacimientoDate = new Date(fechaNacimiento)
 
+    let edad = fechaActual.getFullYear() - fechaNacimientoDate.getFullYear()
+
+    if (fechaNacimientoDate.getMonth() > fechaActual.getMonth() ||
+        (fechaNacimientoDate.getMonth() == fechaActual.getMonth() &&
+            fechaNacimientoDate.getDate() > fechaActual.getDate())) {
+        edad--
+    }
+
     return edad
 }
 
-console.log(`Tiene ${calcularEdad(edad)} años.`)
+console.log(`Tiene ${calcularEdad(fechaNacimiento)} años.`)
