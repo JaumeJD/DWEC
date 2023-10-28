@@ -5,7 +5,7 @@
  * sabiendo la fecha de nacimiento.
 */
 
-let fechaNacimiento = "1997-10-21"
+let fechaNacimiento = "1997-10-29"
 let calcularEdad = fechaNacimiento => {
     let fechaActual = new Date()
     let fechaNacimientoDate = new Date(fechaNacimiento)
