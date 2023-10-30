@@ -17,12 +17,15 @@ let validarJugada = (jugador) => {
 let comprobarRonda = (jugador1, jugador2) => {
 
     if ((jugador1 == "piedra" && jugador2 == "tijera") || (jugador1 == "papel" && jugador2 == "piedra") || (jugador1 == "tijera" && jugador2 == "papel")) {
+
         contJ1++
         console.log(`RONDA PARA EL JUGADOR 1.`)
 
     } else if ((jugador2 == "piedra" && jugador1 == "tijera") || (jugador2 == "papel" && jugador1 == "piedra") || (jugador2 == "tijera" && jugador1 == "papel")) {
+
         contJ2++
         console.log(`RONDA PARA EL JUGADOR 2.`)
+
     } else {
         contEmpate++
         console.log(`TENEMOS UN EMPATE.`)
@@ -37,13 +40,13 @@ let estadisticas = (contJugadas, contJ1, contJ2, contEmpate) => {
     \nJugadas ganadas por J2: ${contJ2} 
     \nJugadas empatadas: ${contEmpate}
     \n_________________________`)
-
 }
 
 //FUNCION QUE COMPRUEBA Y MUESTRA AL VENCEDOR DEL JUEGO.
 let ganador = (contJ1) => {
 
     if (contJ1 == 5) {
+
         return `¡EL JUGADOR 1 SE LLEVA LA VICTORIA!`
     }
 
