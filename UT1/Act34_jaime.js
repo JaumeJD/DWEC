@@ -6,12 +6,11 @@
  * NOTA: caracteres, números, puntos guión alto y bajo+@+caracteres, números+.+al menos dos caracteres.
 */
 
-let email = 'jgarveg163@iesmartinezm.es'
+let email = 'jgarveg163-@iesmartinezm.es'
 
 let validarNombre = email => {
-
-    let emailExp = new RegExp(/^[a-z0-9.-_]+@+[a-z0-9]+.+[a-z]{2}$/i)
-    console.log(emailExp.test(email))
+    let emailExp = new RegExp(/^[a-z0-9.\-_]+@[a-z0-9]+\.[a-z]{2}$/i)
+    return emailExp.test(email)
 }
 
 console.log(validarNombre(email))

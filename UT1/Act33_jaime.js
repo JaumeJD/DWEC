@@ -6,12 +6,12 @@
  * NOTA: No puede haber números ni caracteres especiales como ¡ o ¿
 */
 
-let nombre = 'Javier Ferrer'
+let nombre = 'AdriánFerrer'
 
 let validarNombre = nombre => {
 
     let nombreExp = new RegExp(/^[a-záéíóúñ ]+$/i)
-    console.log(nombreExp.test(nombre))
+    return nombreExp.test(nombre)
 }
 
 console.log(validarNombre(nombre))

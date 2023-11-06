@@ -6,8 +6,6 @@
 
 let max = 600, min = 501
 
-let numAleatorio = (max, min) => {
-    return Math.round(Math.random() * (max - min) + min)
-}
+let numAleatorio = (max, min) => Math.round(Math.random() * (max - min) + min)
 
 console.log(numAleatorio(max, min))

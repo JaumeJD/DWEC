@@ -103,4 +103,29 @@ console.log(Math.round(Math.random() * (60 - 20) + 20))
 
 }
 
+{
+    //CREACION ARRAY BIDIMENSIONALES
+    //Forma 1
+    let arrayBi1 = new Array()
+    arrayBi1[0] = [1, 2, 3, 4, 5]
+    arrayBi1[1] = [2, 3, 4, 5, 6]
+    arrayBi1[2] = [3, 4, 5, 6, 7]
+    arrayBi1[2][4] = 9 //CAMBIA EL VALOR DE LA FILA 2 COLUMNA 4.
 
+    //Forma 2
+    let numFilas = 2, numColumnas = 4
+    let arrayBi2 = new Array(numFilas)
+    for (let i = 0; i < numFilas; i++) {
+        arrayBi2[i] = new Array(numColumnas)
+    }
+
+    //Relleno del array con ceros
+    for (let i = 0; i < numFilas; i++) {
+        for (let i = 0; i < numColumnas; i++) {
+            arrayBi2[i][j] = 0
+        }
+    }
+
+    //Forma 3, array vacio
+    let arrayBi3 = Array.from(Array(2), () => new Array(4))
+}

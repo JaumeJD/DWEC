@@ -8,7 +8,12 @@
 let vector = [1, 5, 34, 99, -2, -60]
 
 let comprobarNumero = vector => {
-    let maxMin = [maxMin.push(Math.max(...vector)), maxMin.push(Math.min(...vector))]
+    console.log(vector)
+    console.log(...vector)
+    let maxMin = []
+    maxMin.push(Math.max(...vector))
+    maxMin.push(Math.min(...vector))
+    
     return maxMin
 }
 
