@@ -8,13 +8,28 @@
 </head>
 
 <body>
-    <button id="idBoton1" onclick="alert('Evento onclick boton Saludar1')">Saludar1</button>
-    <button id="idBoton2" onclick="saludar()">Saludar2</button>
-    <button id="idBoton3">Saludar3</button>
-    <button id="idBoton4">Saludar4</button>
+    <h3>Formulario para acceder a todos sus elementos</h3>
 
-    <br>
-    <script src="./objetoEvents.js"></script>
+    <div>
+        <label for="idCheck1">Bocadillo</label>
+        <input type="checkbox" id="idCheck1" name="nCheck1" value="bocadillo" checked>
+        <label for="idCheck2">Fruta</label>
+        <input type="checkbox" id="idCheck2" name="nCheck1" value="fruta">
+        <label for="idCheck3">Pastelito</label>
+        <input type="checkbox" id="idCheck3" name="nCheck1" value="pastelito">
+    </div>
+    <hr>
+    <div>
+        <label for="idLenguaje">Elige un lenguaje de programación</label>
+        <select id="idLenguaje">
+            <option value="1">Java</option>
+            <option value="2">Javascript</option>
+            <option value="3">Django</option>
+            <option value="4">Php</option>
+        </select>
+    </div>
+
+    <script src="./scriptsEventos.js"></script>
 </body>
 
 </html>
