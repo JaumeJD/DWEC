@@ -52,9 +52,8 @@ buttonCasiPrimos.addEventListener('click', function (e) {
                 cont++
             }
         }
-        //Si cont = 2, significa que el numero es primo; 
-        //si cont > 4 significa que no es primo ni casi primo.
-        if (cont == 3) {
+        //Si cont > 2, significa que el numero no es primo.
+        if (cont == 2) {
             elem.setAttribute('style', 'background-color: yellow;')
         }
     })
@@ -70,3 +69,5 @@ buttonRestart.addEventListener('click', function (e) {
         elem.removeAttribute('style')
     })
 })
+//PD: Realmente para restablecer las celdas basta con copiar el otro botón
+//y cambiar el set por remove. Entiendo por restablecer dejar la tabla como recien creada.
