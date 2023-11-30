@@ -1,17 +1,18 @@
 "use strict"
 
-let lista = document.createElement("ol")
-document.body.appendChild(lista)
+let form = document.createElement("form")
+document.body.appendChild(form)
 
-let llenarLista = () => {
+let llenarForm = () => {
     for (let i = 0; i < 100; i++) {
-        let li = document.createElement("li")
-        let check = document.createElement("input")
-        li.appendChild(check)
-        check.type = "checkbox"
-        check.value = Math.floor(Math.random() * 101 + 100)
-        check.onchange = cambiarCheck
-        lista.appendChild(li)
+        let label = document.createElement("label")
+        label.textContent = i
+        let input = document.createElement("input")
+        input.type = "checkbox"
+        input.value = Math.floor(Math.random() * 101 + 100)
+        input.onchange = cambiarCheck
+        form.appendChild(label)
+        form.appendChild(input)
     }
 }
 
@@ -22,11 +23,7 @@ let cambiarCheck = (e) => {
 let marcarCheck = document.createElement("button")
 marcarCheck.textContent = "Marcar checks"
 marcarCheck.addEventListener('click', function (e) {
-    lista.childNodes.forEach(li => {
-        li.childNodes.forEach(input => {
-            input.checked = true
-        })
-    })
+    form.childNodes.forEach(child => { })
 })
 document.body.appendChild(marcarCheck)
 
@@ -46,7 +43,7 @@ ampliarCheck.textContent = "Ampliar checks"
 ampliarCheck.addEventListener('click', function (e) {
     lista.childNodes.forEach(li => {
         if (li.textContent % 2 == 0) {
-            li
+
         }
     })
 })
@@ -56,4 +53,4 @@ let restablecerCheck = document.createElement("button")
 
 
 
-llenarLista()
+llenarForm()
