@@ -7,9 +7,11 @@ let saludo
 iniciar.setAttribute('style', 'padding: 10px; border-radius: 10px; background-color: aquamarine; font-weight: bold; margin-right: 10px;')
 iniciar.textContent = 'Comenzar Saludos'
 iniciar.addEventListener('click', function (event) {
-    saludo = setInterval(function () {
-        alert("HOLA CARACOLA")
-    }, 2000)
+    if (!saludo) {
+        saludo = setInterval(function () {
+            alert("HOLA CARACOLA")
+        }, 5000)
+    }
 })
 //Se añade el elemento boton "iniciar" al body del html.
 document.body.appendChild(iniciar)
@@ -21,6 +23,7 @@ parar.setAttribute('style', 'padding: 10px; border-radius: 10px; color: white; b
 parar.textContent = 'Parar Saludos'
 parar.addEventListener('click', function (event) {
     clearInterval(saludo)
+    saludo = null
 })
 //Se añade el elemento boton "parar" al body del html.
 document.body.appendChild(parar)
