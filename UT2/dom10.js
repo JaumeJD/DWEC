@@ -23,10 +23,6 @@ label.textContent = "DNI:";
 label.setAttribute("for", "dni");
 div.appendChild(label);
 
-//Mensaje de error en la validacion
-let p = document.createElement("p");
-p.setAttribute("color", "red");
-
 //Input del formulario (POSIBLES VALIDACIONES EN EL HTML).
 let input = document.createElement("input");
 input.setAttribute("id", "dni");
@@ -35,14 +31,35 @@ input.setAttribute("type", "text");
 input.setAttribute("placeholder", "123456789A");
 input.required = true;
 input.addEventListener("blur", function (event) {
-  let expDni = new RegExp(/[0-9]{8}[A-Za-z]/);
-  if (expDni.test(input.value)) {
-    console.log("Yep");
+  if (!dniValido(input)) {
+    console.log("El dni NO es válido.");
   } else {
-    console.log("Nop");
+    console.log("El dni es ");
   }
 });
 div.appendChild(input);
+
+//Funcion para comprobar dni
+let dniValido = (input) => {
+  let expDni = new RegExp(/^[0-9]{8}[A-Z]$/i);
+  let modulo = input.value.slice(0, 8) % 23
+  let letra = input.value.slice(8)
+  let letras = 'TRWAGMYFPDXBNJZSQVHLCKE'
+  if (expDni.test(input.value) && letras.charAt(modulo) == letra) {
+    inputError('El dni es válido.')
+    return true
+  }
+  inputError('El dni NO es válido.')
+  return false
+}
+
+//Mensaje de error de la validación
+let inputError = (mensaje) => {
+  let p = document.createElement('p')
+  p.textContent = mensaje
+  p.setAttribute('style', 'color: red;')
+  input.insertAdjacentElement('afterend', p)
+}
 
 //Espacio entre input y button.
 let space = document.createElement("br");
