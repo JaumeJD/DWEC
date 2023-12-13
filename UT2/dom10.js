@@ -28,13 +28,14 @@ let input = document.createElement("input");
 input.setAttribute("id", "dni");
 input.setAttribute("name", "dni");
 input.setAttribute("type", "text");
-input.setAttribute("placeholder", "123456789A");
+input.setAttribute("placeholder", "12345678A");
 input.required = true;
 input.addEventListener("blur", function (event) {
   if (!dniValido(input)) {
     console.log("El dni NO es válido.");
   } else {
-    console.log("El dni es ");
+    console.log(12345678 % 23);
+    console.log("El dni es válido.");
   }
 });
 div.appendChild(input);
@@ -42,24 +43,26 @@ div.appendChild(input);
 //Funcion para comprobar dni
 let dniValido = (input) => {
   let expDni = new RegExp(/^[0-9]{8}[A-Z]$/i);
-  let modulo = input.value.slice(0, 8) % 23
-  let letra = input.value.slice(8)
-  let letras = 'TRWAGMYFPDXBNJZSQVHLCKE'
-  if (expDni.test(input.value) && letras.charAt(modulo) == letra) {
-    inputError('El dni es válido.')
-    return true
+  let modulo = input.value.slice(0, 8) % 23;
+  let letra = input.value.slice(8);
+  let letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+  if (
+    expDni.test(input.value) &&
+    letras.charAt(modulo) == letra.toUpperCase()
+  ) {
+    inputMessage("El dni es válido.");
+    return true;
   }
-  inputError('El dni NO es válido.')
-  return false
-}
+  inputMessage("El dni NO es válido.");
+  return false;
+};
 
 //Mensaje de error de la validación
-let inputError = (mensaje) => {
-  let p = document.createElement('p')
-  p.textContent = mensaje
-  p.setAttribute('style', 'color: red;')
-  input.insertAdjacentElement('afterend', p)
-}
+let inputMessage = (mensaje) => {
+  let p = document.createElement("p");
+  p.textContent = mensaje;
+  input.insertAdjacentElement("afterend", p);
+};
 
 //Espacio entre input y button.
 let space = document.createElement("br");
@@ -70,4 +73,10 @@ let button = document.createElement("input");
 button.setAttribute("id", "idButton");
 button.setAttribute("type", "submit");
 button.setAttribute("value", "Click para enviar");
+button.addEventListener("click", function (event) {
+  if (!dniValido(input)) {
+    event.preventDefault();
+    console.log("NO SE HA PODIDO MANDAR.")
+  }
+});
 form.appendChild(button);
