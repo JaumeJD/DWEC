@@ -76,7 +76,7 @@ button.setAttribute("value", "Click para enviar");
 button.addEventListener("click", function (event) {
   if (!dniValido(input)) {
     event.preventDefault();
-    console.log("NO SE HA PODIDO MANDAR.")
+    console.log("NO SE HA PODIDO MANDAR.");
   }
 });
 form.appendChild(button);
