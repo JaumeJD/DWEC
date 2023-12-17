@@ -38,10 +38,12 @@ button.setAttribute("style", "width: 100px; padding: 4px; border-radius: 6px;");
 button.addEventListener("click", function (event) {
   let text1 = document.getElementById("text1").value;
   let text2 = document.getElementById("text2").value;
-  console.log(text1);
-  console.log(text2);
-  
-  //
+  if (!validarAnagrama(text1, text2)) {
+    event.preventDefault()
+    alert("El contenido de los campos debe ser anagramas.")
+  }
+
+  //ENVIAR FORMULARIO DESDE JS
   form.submit();
 });
 form.appendChild(button);
