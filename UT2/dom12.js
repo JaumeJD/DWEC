@@ -40,8 +40,8 @@ button.addEventListener("click", function (event) {
   let text2 = document.getElementById("text2").value;
   console.log(text1);
   console.log(text2);
-  
-  //
+
+  //Envia el formulario desde JS, sin necesidad de un boton.
   form.submit();
 });
 form.appendChild(button);
