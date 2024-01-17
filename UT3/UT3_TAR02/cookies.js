@@ -44,3 +44,30 @@ let checkCookie = () => {
 
 /****************************************/
 
+let info = document.createElement("p")
+
+let comprobarCookie = () => {
+    let visitCount = getCookie("galleta")
+
+    if (visitCount == "") {
+        visitCount = 1
+    } else {
+        visitCount = parseInt(visitCount) + 1
+    }
+
+    setCookie("galleta", visitCount, 365)
+    console.log(getCookie("galleta"))
+
+    info.textContent = `Nº de visitas: ${visitCount}`
+    document.body.appendChild(info)
+}
+
+document.addEventListener("DOMContentLoaded", comprobarCookie)
+
+let button = document.createElement("button")
+button.textContent = "Eliminar cookie"
+button.addEventListener("click", function (event) {
+    deleteCookie("galleta")
+    alert("Se ha eliminado la cookie.")
+})
+document.body.appendChild(button)
