@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UT3_TAR03</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+  <h2>Web del tipo TODO list</h2>
+
+  <div class="input-field">
+    <label>Nº de tarea</label>
+    <input id="number" placeholder="..." />
+  </div>
+
+  <div class="input-field">
+    <label>Tipo de tarea</label>
+    <input id="task" placeholder="..." />
+  </div>
+
+  <div class="input-field">
+    <label>Prioridad de tarea</label>
+    <select id="priority">
+      <option hidden>Selecciona prioridad</option>
+      <option value="alta">Alta</option>
+      <option value="media">Media</option>
+      <option value="baja">Baja</option>
+    </select>
+  </div>
+
+  <button id="saveTask">Guardar tarea</button>
+  <button id="showTasks">Mostrar tareas</button>
+  <button id="removeTasks">Eliminar tareas</button>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
