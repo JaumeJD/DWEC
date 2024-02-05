@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <ul>
       @for (game of games; track game.id) {
